@@ -1,0 +1,6 @@
+.godot/
+.vs/
+*.user
+*.userprefs
+.claude/settings.local.json
+tmp/

@@ -1,0 +1,152 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/settings/SettingsMenu.cs" id="1_script"]
+[ext_resource type="Theme" path="res://assets/themes/solarix_interface.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="Style_panel"]
+bg_color = Color(0.003, 0.01, 0.005, 0.985)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22, 0.35, 0.14, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.4, 0.66, 0.14, 0.11)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="Style_button"]
+bg_color = Color(0.05, 0.05, 0.06, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.34, 0.15, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="Style_button_focus"]
+bg_color = Color(0.07, 0.12, 0.05, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.62, 0.78, 0.21, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+process_mode = 3
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.001, 0.004, 0.002, 0.99)
+
+[node name="SafeArea" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 26.0
+offset_right = -34.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="SafeArea"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("Style_panel")
+
+[node name="Margin" type="MarginContainer" parent="SafeArea/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 26
+theme_override_constants/margin_right = 34
+theme_override_constants/margin_bottom = 26
+
+[node name="Layout" type="VBoxContainer" parent="SafeArea/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="SafeArea/Panel/Margin/Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS_TITLE"
+horizontal_alignment = 1
+
+[node name="Accent" type="ColorRect" parent="SafeArea/Panel/Margin/Layout"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.52, 0.68, 0.18, 0.84)
+
+[node name="CategoryCenter" type="CenterContainer" parent="SafeArea/Panel/Margin/Layout"]
+layout_mode = 2
+
+[node name="CategoryButtons" type="HBoxContainer" parent="SafeArea/Panel/Margin/Layout/CategoryCenter"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Tabs" type="TabContainer" parent="SafeArea/Panel/Margin/Layout"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+size_flags_vertical = 3
+tabs_visible = false
+
+[node name="Actions" type="HBoxContainer" parent="SafeArea/Panel/Margin/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BackButton" type="Button" parent="SafeArea/Panel/Margin/Layout/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("Style_button")
+theme_override_styles/hover = SubResource("Style_button_focus")
+theme_override_styles/focus = SubResource("Style_button_focus")
+text = "MENU_BACK"
+
+[node name="ActionSpacer" type="Control" parent="SafeArea/Panel/Margin/Layout/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResetButton" type="Button" parent="SafeArea/Panel/Margin/Layout/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("Style_button")
+theme_override_styles/hover = SubResource("Style_button_focus")
+theme_override_styles/focus = SubResource("Style_button_focus")
+text = "SETTINGS_RESET"
+
+[node name="ApplyButton" type="Button" parent="SafeArea/Panel/Margin/Layout/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.82, 0.32, 1)
+theme_override_styles/normal = SubResource("Style_button")
+theme_override_styles/hover = SubResource("Style_button_focus")
+theme_override_styles/focus = SubResource("Style_button_focus")
+text = "SETTINGS_APPLY"

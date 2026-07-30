@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 768">
+  <g stroke="#111813" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="none" stroke="#69706a" stroke-width="34" d="M350 492q114 35 85 144-13 49-73 57"/>
+    <path fill="none" stroke="#2c332f" stroke-width="8" d="M350 492q114 35 85 144-13 49-73 57"/>
+    <path fill="#283126" d="M177 548l-16 142 74 4 21-139zm158 0 16 142-74 4-21-139z"/>
+    <path fill="#151b17" d="M157 681q35-9 82 2l-5 39H132q1-28 25-41zm198 0q-35-9-82 2l5 39h102q-1-28-25-41z"/>
+    <path fill="#c9c8bc" d="M154 333q23-35 66-47h72q43 12 66 47l31 209-78 48-55-61-55 61-78-48z"/>
+    <path fill="#252c28" d="M220 286h72l15 52-51 45-51-45z"/>
+    <path fill="#596d23" d="M205 306l51 77 51-77 20 18-39 96h-64l-39-96z"/>
+    <path fill="#343b37" d="M154 333l51-27 19 114-37 159-64-37zm204 0l-51-27-19 114 37 159 64-37z"/>
+    <path fill="#171d19" d="M187 579l37-159h64l37 159-69-50z"/>
+    <path fill="none" d="M256 383v146m-32-109h64"/>
+    <path fill="#202622" d="M145 374l-35 139 45 14 32-126zm222 0l35 139-45 14-32-126z"/>
+    <path fill="#6e756f" d="M105 508q17-11 50 5l-2 42q-24 17-51-4zm302 0q-17-11-50 5l2 42q24 17 51-4z"/>
+    <path fill="#626a64" d="M155 141L174 43l70 77zm202 0L338 43l-70 77z"/>
+    <path fill="#c58f83" d="M178 111l8-40 31 47zm156 0l-8-40-31 47z"/>
+    <ellipse fill="#737b74" cx="256" cy="201" rx="119" ry="112"/>
+    <path fill="#9aa098" d="M152 211q24 75 104 102 80-27 104-102l-68 28-36 41-36-41z"/>
+    <path fill="none" stroke="#3b423d" stroke-width="12" d="M205 96l13 55m51-61l-8 61m55-42l-24 49"/>
+    <path fill="#111813" d="M184 191q29-22 55 2-29 15-55-2zm89 2q26-24 55-2-26 17-55 2z" stroke-width="5"/>
+    <ellipse fill="#b8d94f" stroke="none" cx="213" cy="192" rx="5" ry="9"/>
+    <ellipse fill="#b8d94f" stroke="none" cx="299" cy="192" rx="5" ry="9"/>
+    <path fill="#4a3e3b" d="M238 235q18-12 36 0-5 17-18 17t-18-17z"/>
+    <path fill="none" d="M256 252v19m0 0q-24 17-42 0m42 0q24 17 42 0m-83-23l-55-11m56 28l-58 5m139-22l55-11m-56 28l58 5"/>
+    <path fill="#c9c8bc" d="M200 284q56 31 112 0l-12 55-44 44-44-44z"/>
+    <path fill="#111813" d="M210 305l46 78-61-47zm92 0l-46 78 61-47z"/>
+    <rect fill="#a7c64a" x="238" y="435" width="36" height="20" rx="5"/>
+    <path fill="none" stroke="#a7c64a" stroke-width="5" d="M172 455l-14 42m182-42 14 42"/>
+  </g>
+</svg>

@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://cpmxk0asree1k"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://xu8m6dlj06ck" path="res://assets/branding/solarix_failure_official.svg" id="2_logo"]
+[ext_resource type="Theme" uid="uid://rv0os4vojg6n" path="res://assets/themes/solarix_interface.tres" id="3_theme"]
+
+[sub_resource type="StyleBoxFlat" id="Style_frame"]
+bg_color = Color(0.002, 0.008, 0.004, 0.76)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22, 0.34, 0.14, 0.94)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="MainMenu" type="Control" unique_id=1145585711]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_theme")
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1560432842]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0015, 0.0045, 0.0025, 1)
+
+[node name="OuterFrame" type="Panel" parent="." unique_id=308790528]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 22.0
+offset_right = -24.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_frame")
+
+[node name="CenterAnchor" type="CenterContainer" parent="." unique_id=1113632802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="VBoxContainer" parent="CenterAnchor" unique_id=306655780]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(860, 0)
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="GameLogo" type="TextureRect" parent="CenterAnchor/Content" unique_id=2095732308]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(860, 285)
+layout_mode = 2
+texture = ExtResource("2_logo")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Accent" type="ColorRect" parent="CenterAnchor/Content" unique_id=481306657]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.52, 0.68, 0.18, 0.82)
+
+[node name="Buttons" type="VBoxContainer" parent="CenterAnchor/Content" unique_id=1298934898]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="StartButton" type="Button" parent="CenterAnchor/Content/Buttons" unique_id=1798223500]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "START"
+
+[node name="SettingsButton" type="Button" parent="CenterAnchor/Content/Buttons" unique_id=1185309319]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "SETTINGS"
+
+[node name="ExitButton" type="Button" parent="CenterAnchor/Content/Buttons" unique_id=1434435744]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 60)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0.38, 0.3, 1)
+theme_override_colors/font_hover_color = Color(1, 0.38, 0.3, 1)
+theme_override_font_sizes/font_size = 19
+text = "EXIT"
+
+[node name="VersionLabel" type="Label" parent="CenterAnchor/Content" unique_id=1336701515]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.76, 0.28, 1)
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1

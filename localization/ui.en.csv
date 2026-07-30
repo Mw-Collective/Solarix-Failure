@@ -1,0 +1,59 @@
+keys,en
+MENU_PLAY,Play
+MENU_SETTINGS,Settings
+MENU_QUIT,Quit
+MENU_BACK,Back
+MENU_VERSION,Version
+PLAY_TITLE,Play
+PLAY_SUBTITLE,Choose how you want to continue your journey.
+PLAY_CONTINUE,Continue
+PLAY_NEW_GAME,New Game
+PLAY_LOAD_GAME,Load Game
+PLAY_MULTIPLAYER,Multiplayer — Coming Soon
+PLAY_MULTIPLAYER_TOOLTIP,Multiplayer is not available in this build.
+NEW_GAME_CONFIRM_TITLE,Start a New Game?
+NEW_GAME_CONFIRM_BODY,This creates a separate run. Your existing saves will not be deleted.
+NEW_GAME_CONFIRM_ACTION,Start New Game
+PROLOGUE_SKIP_PROMPT,Skip
+PROLOGUE_SKIP_KEY,E
+ORIGIN_TITLE,Choose Your Origin
+ORIGIN_SUBTITLE,Your origin defines who enters the ruins. Additional origins may arrive in future chapters.
+ORIGIN_ARCHIVE,SOLARIX // BIOLOGICAL ARCHIVE
+ORIGIN_HUMAN,Human
+ORIGIN_HUMAN_TAG,Baseline Survivor
+ORIGIN_HUMAN_BODY,Adaptable survivors shaped by a world that endured long after Solarix failed. No traits or statistics are assigned at this stage.
+ORIGIN_CONFIRM,Start
+ORIGIN_FOX,Fox
+ORIGIN_FOX_TAG,Vulpine Adaptation
+ORIGIN_FOX_BODY,An undocumented vulpine phenotype preserved in corrupted Solarix records. This origin is not yet available.
+ORIGIN_CAT,Cat
+ORIGIN_CAT_TAG,Feline Adaptation
+ORIGIN_CAT_BODY,A feline phenotype referenced by sealed post-collapse research. This origin is not yet available.
+ORIGIN_AVAILABLE,Available
+ORIGIN_LOCKED,Locked
+ORIGIN_LOCKED_ACTION,Origin Locked
+ORIGIN_NAV_HINT,Scroll or use A / D to browse
+COMPLETE_TITLE,Prologue Complete
+COMPLETE_SUBTITLE,Your journey is ready to begin.
+COMPLETE_ORIGIN,Origin: Human
+COMPLETE_BODY,This is the current end of the playable pre-game flow. Your progress has been autosaved and can be resumed from Continue or Load Game.
+COMPLETE_RETURN,Return to Play Menu
+LOAD_TITLE,Load Game
+LOAD_SUBTITLE,Browse, filter, rename, or remove saved progress.
+LOAD_FILTER_ALL,All Save Types
+LOAD_FILTER_MANUAL,Manual Saves
+LOAD_FILTER_AUTOSAVE,Autosaves
+LOAD_ALL_RUNS,All Runs
+LOAD_RUN,Run
+LOAD_EMPTY,No saves match the selected filters.
+LOAD_ACTION,Load
+LOAD_RENAME,Rename
+LOAD_DELETE,Delete
+LOAD_RENAME_TITLE,Rename Manual Save
+LOAD_DELETE_TITLE,Delete Save?
+LOAD_DELETE_BODY,This save will be permanently removed.
+SAVE_PROLOGUE_COMPLETE,Prologue Complete
+SAVE_ORIGIN_CONFIRMED,Human Origin Confirmed
+SETTINGS_TITLE,Settings
+SETTINGS_RESET,Reset to Defaults
+SETTINGS_APPLY,Apply

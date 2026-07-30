@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/characters/human/idle_breathing_sprite_sheet.png" id="1_human"]
+[ext_resource type="Script" path="res://scripts/ui/components/AnimatedSpriteSheetView.cs" id="2_animation"]
+[ext_resource type="Script" path="res://scripts/gameplay/GameplayCanvas.cs" id="3_canvas"]
+[ext_resource type="Texture2D" path="res://assets/characters/human/back_idle_breathing_sprite_sheet.png" id="4_human_back"]
+[ext_resource type="Texture2D" path="res://assets/characters/human/right_idle_breathing_sprite_sheet.png" id="5_human_side"]
+[ext_resource type="Texture2D" path="res://assets/characters/human/front_walk_sprite_sheet.png" id="6_human_walk_front"]
+[ext_resource type="Texture2D" path="res://assets/characters/human/back_walk_sprite_sheet.png" id="7_human_walk_back"]
+[ext_resource type="Texture2D" path="res://assets/characters/human/right_walk_sprite_sheet.png" id="8_human_walk_side"]
+
+[node name="GameplayCanvas" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_canvas")
+FrontIdleSheet = ExtResource("1_human")
+BackIdleSheet = ExtResource("4_human_back")
+SideIdleSheet = ExtResource("5_human_side")
+FrontWalkSheet = ExtResource("6_human_walk_front")
+BackWalkSheet = ExtResource("7_human_walk_back")
+SideWalkSheet = ExtResource("8_human_walk_side")
+
+[node name="Camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(960, 540)
+enabled = true
+
+[node name="BlackCanvas" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Human" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -67.6667
+offset_right = 50.0
+offset_bottom = 67.6667
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_human")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_animation")
+SpriteSheet = ExtResource("1_human")
+Columns = 3
+Rows = 3
+FrameCount = 9
+FramesPerSecond = 6.0

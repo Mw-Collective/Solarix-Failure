@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Solarix: Failure"
+config/version="0.0.1-alpha"
+run/main_scene="res://scenes/boot/splash.tscn"
+config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
+boot_splash/bg_color=Color(0.0015, 0.0045, 0.0025, 1)
+boot_splash/show_image=false
+
+[autoload]
+
+SettingsService="*res://scripts/services/settings/SettingsService.cs"
+SaveGameService="*res://scripts/services/saves/SaveGameService.cs"
+SceneFlowService="*res://scripts/application/SceneFlowService.cs"
+ApplicationController="*res://scripts/application/ApplicationController.cs"
+UiSoundService="*res://scripts/services/audio/UiSoundService.cs"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="SolarixFailure"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization/ui.en.en.translation")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.0015, 0.0045, 0.0025, 1)

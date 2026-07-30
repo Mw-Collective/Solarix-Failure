@@ -1,0 +1,249 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://scripts/application/boot/Splash.cs" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/branding/mw_collective.png" id="2_mw"]
+[ext_resource type="Texture2D" path="res://assets/branding/solarix_failure_official.svg" id="3_game_logo"]
+[ext_resource type="AudioStream" path="res://assets/audio/branding/mw_collective_ident.wav" id="4_mw_ident"]
+[ext_resource type="AudioStream" path="res://assets/audio/branding/solarix_logo_reveal.wav" id="5_solarix_reveal"]
+
+[sub_resource type="Shader" id="Shader_credit_glow"]
+code = "shader_type canvas_item;\n\nvoid fragment() {\n\tfloat distance_from_center = distance(UV, vec2(0.5));\n\tfloat halo = 1.0 - smoothstep(0.02, 0.68, distance_from_center);\n\tvec3 warm_red = vec3(0.15, 0.012, 0.009) * halo * 0.52;\n\tCOLOR = vec4(warm_red, halo);\n}\n"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_credit_glow"]
+shader = SubResource("Shader_credit_glow")
+
+[sub_resource type="Animation" id="Animation_RESET"]
+resource_name = "RESET"
+length = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditPhase/AmbientGlow:modulate")
+tracks/0/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0)]}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreditPhase/BrandStack/MwLogo:modulate")
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0)]}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CreditPhase/BrandStack/MwLogo:scale")
+tracks/2/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.94, 0.94)]}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CreditPhase/BrandStack/DividerCenter/Divider:modulate")
+tracks/3/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0)]}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CreditPhase/BrandStack/DividerCenter/Divider:scale")
+tracks/4/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0, 1)]}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CreditPhase/BrandStack/Credit:modulate")
+tracks/5/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0)]}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CreditPhase:modulate")
+tracks/6/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1)]}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GameLogoPhase:modulate")
+tracks/7/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 0)]}
+
+[sub_resource type="Animation" id="Animation_studio_ident"]
+resource_name = "studio_ident"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditPhase/AmbientGlow:modulate")
+tracks/0/interp = 2
+tracks/0/keys = {"times": PackedFloat32Array(0, 1.1), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreditPhase/BrandStack/MwLogo:modulate")
+tracks/1/interp = 2
+tracks/1/keys = {"times": PackedFloat32Array(0.12, 0.92), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CreditPhase/BrandStack/MwLogo:scale")
+tracks/2/interp = 2
+tracks/2/keys = {"times": PackedFloat32Array(0.12, 1.12), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0.94, 0.94), Vector2(1, 1)]}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CreditPhase/BrandStack/DividerCenter/Divider:modulate")
+tracks/3/interp = 2
+tracks/3/keys = {"times": PackedFloat32Array(0.55, 1), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CreditPhase/BrandStack/DividerCenter/Divider:scale")
+tracks/4/interp = 2
+tracks/4/keys = {"times": PackedFloat32Array(0.55, 1.15), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector2(0, 1), Vector2(1, 1)]}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CreditPhase/BrandStack/Credit:modulate")
+tracks/5/interp = 2
+tracks/5/keys = {"times": PackedFloat32Array(0.72, 1.2), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]}
+
+[sub_resource type="Animation" id="Animation_studio_out"]
+resource_name = "studio_out"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditPhase:modulate")
+tracks/0/interp = 2
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.75), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]}
+
+[sub_resource type="Animation" id="Animation_game_logo_in"]
+resource_name = "game_logo_in"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameLogoPhase:modulate")
+tracks/0/interp = 2
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.9), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main"]
+_data = {
+&"RESET": SubResource("Animation_RESET"),
+&"game_logo_in": SubResource("Animation_game_logo_in"),
+&"studio_ident": SubResource("Animation_studio_ident"),
+&"studio_out": SubResource("Animation_studio_out")
+}
+
+[node name="Splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="MwIdentSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_mw_ident")
+bus = &"UI"
+
+[node name="SolarixRevealSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_solarix_reveal")
+bus = &"UI"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0015, 0.0045, 0.0025, 1)
+
+[node name="CreditPhase" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AmbientGlow" type="ColorRect" parent="CreditPhase"]
+material = SubResource("ShaderMaterial_credit_glow")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -540.0
+offset_right = 540.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BrandStack" type="VBoxContainer" parent="CreditPhase"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -265.0
+offset_right = 330.0
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="MwLogo" type="TextureRect" parent="CreditPhase/BrandStack"]
+custom_minimum_size = Vector2(360, 360)
+layout_mode = 2
+texture_filter = 1
+texture = ExtResource("2_mw")
+expand_mode = 3
+stretch_mode = 5
+pivot_offset = Vector2(180, 180)
+
+[node name="DividerCenter" type="CenterContainer" parent="CreditPhase/BrandStack"]
+layout_mode = 2
+
+[node name="Divider" type="ColorRect" parent="CreditPhase/BrandStack/DividerCenter"]
+custom_minimum_size = Vector2(76, 2)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0.937, 0.145, 0.106, 0.62)
+pivot_offset = Vector2(38, 1)
+
+[node name="Credit" type="RichTextLabel" parent="CreditPhase/BrandStack"]
+custom_minimum_size = Vector2(660, 38)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.67, 0.67, 0.7, 1)
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center][color=#aaaab0]Made with[/color]  [color=#ef3b31]♥[/color]  [color=#aaaab0]by[/color]  [color=#f0f0f2]Mw Collective[/color][/center]"
+fit_content = true
+scroll_active = false
+
+[node name="GameLogoPhase" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -760.0
+offset_top = -430.0
+offset_right = 760.0
+offset_bottom = 430.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture_filter = 1
+texture = ExtResource("3_game_logo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_main")
+}
