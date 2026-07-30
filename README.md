@@ -7,13 +7,13 @@
     <img alt="Godot 4.7" src="https://img.shields.io/badge/Godot-4.7-478CBF?logo=godot-engine&logoColor=white">
     <img alt="C# / .NET 10" src="https://img.shields.io/badge/C%23-.NET_10-512BD4?logo=dotnet&logoColor=white">
     <img alt="Status: Alpha" src="https://img.shields.io/badge/status-alpha-E3B341">
-    <img alt="License: PolyForm Noncommercial" src="https://img.shields.io/badge/license-PolyForm_Noncommercial-D73A49">
+    <img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-2EA44F">
   </p>
 </div>
 
 ## About
 
-**Solarix: Failure** is a source-available Godot game that combines strategic base management with bullet-heaven combat, clan warfare, survival systems, and an expanding world.
+**Solarix: Failure** is an open-source Godot game that combines strategic base management with bullet-heaven combat, clan warfare, survival systems, and an expanding world.
 
 The project is currently in early alpha. Its direction includes:
 
@@ -64,9 +64,9 @@ dotnet build SolarixFailure.sln
 
 ## Contributing and Experimenting
 
-You are welcome to study, fork, modify, and redistribute the project for noncommercial purposes. Experiments, alternative systems, accessibility improvements, balancing work, and creative modifications are encouraged.
+You are welcome to study, fork, modify, and redistribute the project under the terms of the GNU General Public License. Experiments, alternative systems, accessibility improvements, balancing work, and creative modifications are encouraged.
 
-Commercial use—including use in products, services, or other money-making projects—is not permitted. See [LICENSE](LICENSE) for the complete terms.
+If you distribute a modified version, the GPL requires that it remain under the GPL and that its corresponding source be made available to its recipients. See [LICENSE](LICENSE) for the complete terms.
 
 ## Support the Project
 
@@ -84,7 +84,4 @@ If you would like to support continued development, you can donate **USDT on the
 
 ## License
 
-Solarix: Failure is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). You may use, modify, and redistribute it for permitted noncommercial purposes. Commercial or money-making use is not permitted.
-
-Because the license restricts commercial use, this project is accurately described as **source-available**, rather than Open Source Initiative (OSI) open-source software.
-
+Solarix: Failure is licensed under the [GNU General Public License v3.0 or later](LICENSE). You may use, study, modify, and redistribute the project—including commercially—provided you follow the GPL's terms. Distributed derivative works must remain under the GPL and provide their corresponding source to recipients.
